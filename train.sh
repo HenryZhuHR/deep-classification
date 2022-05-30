@@ -1,0 +1,15 @@
+python3 train.py \
+    --arch resnet34 \
+    --device cuda:0 \
+    --batch_size 256 \
+    --max_epoch 140 \
+    --lr 1e-4 \
+    --num_worker 8 \
+    --seed 100 \
+    --model_save_dir server-re/checkpoints \
+    --model_save_name adv~lr=1e-4 \
+    --data ~/datasets/new_dataset/ \
+    --logdir server-reAt/runs \
+    --epsilon 2 \
+    --alpha 0.03 \
+    --iters 10
